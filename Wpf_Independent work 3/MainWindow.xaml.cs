@@ -97,7 +97,7 @@ namespace Wpf_Independent_work_3
             }
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)//открытие файла
+        private void OpenExecuted(object sender, RoutedEventArgs e)//открытие файла
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";//Задаем фильтр с расширениями файлов 
@@ -107,7 +107,7 @@ namespace Wpf_Independent_work_3
             }
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)//сохранение файла
+        private void SaveExecuted(object sender, RoutedEventArgs e)//сохранение файла
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
@@ -117,7 +117,7 @@ namespace Wpf_Independent_work_3
             }
         }
 
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)//закрытие программы
+        private void ExitExecuted(object sender, RoutedEventArgs e)//закрытие программы
         {
             Application.Current.Shutdown();
         }
