@@ -121,5 +121,15 @@ namespace Wpf_Independent_work_3
         {
             Application.Current.Shutdown();
         }
+
+        private void themes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Uri theme = new Uri(themes.SelectedIndex == 0 ? "Light.xaml" : "Dark.xaml",UriKind.Relative);//создаем экземпляр класса Uri для привязки словарей ресурсов. 
+                                                                                                         //В конструкторе, через тернарный опероатор определяем какой из словарей подключить, в зависимости от выбранного значения в ComboBox с темами.
+                                                                                                         //указываем тип пути к файлу "относительный".
+            ResourceDictionary themeDict = Application.LoadComponent(theme) as ResourceDictionary;//подключаем выбраный файл
+            Application.Current.Resources.MergedDictionaries.Add(themeDict);//загружаем полученный ресурс в коллекцию ресурсов
+        }
     }
 }
