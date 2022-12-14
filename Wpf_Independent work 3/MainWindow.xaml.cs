@@ -27,23 +27,23 @@ namespace Wpf_Independent_work_3
             InitializeComponent();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)//изменение стиля шрифта
-        {
-            string fontName = ((sender as ComboBox).SelectedItem as string);
-            if (textBox != null)
-            {
-                textBox.FontFamily = new FontFamily(fontName);
-            }
-        }
+        //private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)//изменение стиля шрифта
+        //{
+        //    string fontName = ((sender as ComboBox).SelectedItem as string);
+        //    if (textBox != null)
+        //    {
+        //        textBox.FontFamily = new FontFamily(fontName);
+        //    }
+        //}
 
-        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)//изменение размера шрифта
-        {
-            if (textBox != null)
-            {
-                double fontSize = Convert.ToDouble(((sender as ComboBox).SelectedItem));
-                textBox.FontSize = fontSize;
-            }
-        }
+        //private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)//изменение размера шрифта
+        //{
+        //    if (textBox != null)
+        //    {
+        //        double fontSize = Convert.ToDouble(((sender as ComboBox).SelectedItem));
+        //        textBox.FontSize = fontSize;
+        //    }
+        //}
 
         private void Button_Click(object sender, RoutedEventArgs e)//изменение толщины шрифта
         {
